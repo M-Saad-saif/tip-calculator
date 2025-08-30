@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="icon" href="tip calculator  icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="tip cal.css">
+    <title>Tip Calculator | SAAD</title>
+</head>
+
+<body>
+    <h1><i class="ri-calculator-line"></i>Tip Calculator</h1>
+    <div class="container">
+        <h3>Enter your amount of your purchase</h3>
+        <input type="text" id="amount-input" placeholder="Enter Amount">
+
+        <h3>Enter the amount of tip</h3>
+        <input type="range" name="" id="range-slider" min="0" max="100" value="0%">
+        <span id="tipRange"></span>
+
+        <div id="ansDiv">
+            <h3>Tip amount is</h3>
+            <p id="answer-part">00</p>
+        </div>
+        <button>Calculate</button>
+    </div>
+
+    <script src="tip cal.js"></script>
+    <script>
+        if ("ServiceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register('service-worker.js').then((reg) => {
+                    console.log("service worker register at: ", reg.scope)
+                }).catch((err) => {
+                    console.log("service worker register failed: ", err)
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>

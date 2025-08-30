@@ -27,7 +27,7 @@ Enter the bill amount, select the tip percentage using a slider, and instantly s
 ---
 
 ## 📂 How to Use  
-1. Clone the repository:  
-   ```bash
-   https://m-saad-saif.github.io/tip-calculator/
+
+ https://m-saad-saif.github.io/tip-calculator/
+
 

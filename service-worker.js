@@ -1,6 +1,4 @@
-const { cache } = require("react");
-
-let CACHE_NAME = "tip-calculator-cache-v1";
+let CACHE_NAME = "tip calculator-cache-v1";
 let urlsToCache = [
   "./",
   "./index.html",
@@ -15,7 +13,7 @@ self.addEventListener("install", (e) => {
   );
 });
 
-self.addEventListener("fetch", () => {
+self.addEventListener("fetch", (e) => {
   e.respondWith(
     caches.match(e.request).then((cachedResponse) => {
       return cachedResponse || fetch(e.request);
